@@ -17,8 +17,10 @@ pipeline {
          try { 
           sh "mvn clean install -U -Dmaven.test.skip=true"
           currentBuild.result = 'SUCCESS' 
-         } catch {Exception err)
+         } catch (Exception err)
+           {
            currentBuild.result = 'FAILURE' 
+           }
        }
       }
      }
