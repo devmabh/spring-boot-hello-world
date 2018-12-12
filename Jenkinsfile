@@ -15,7 +15,7 @@ pipeline {
        script { 
          try { 
           sh "mvn clean install"
-          sh "java-version"
+          sh "java -version"
           currentBuild.result = 'SUCCESS' 
          } catch (Exception err)
            {
