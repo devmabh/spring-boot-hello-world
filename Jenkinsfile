@@ -9,8 +9,7 @@ pipeline {
              def javaHome = tool 'JAVA_1.8' 
              }
            }
-         }
- 
+         } 
      stage(' Build customer app code') { 
       steps {
        script { 
