@@ -1,15 +1,15 @@
 pipeline { 
  agent any 
- stages {
-    stage('CodeCheckout') {
-       steps {
-           sripts { 
-             checkout scm 
-             def mvnHome = tool 'maven-3' 
-             def javaHome = tool 'JAVA_1.8' 
-             }
-           }
-         } 
+    stages {
+     stage('CodeCheckout') {
+             steps {
+             script { 
+                 checkout scm 
+                 def mvnHome = tool 'maven-3' 
+                 def javaHome = tool 'JAVA_1.8' 
+                     }
+                  }
+              } 
      stage(' Build customer app code') { 
       steps {
        script { 
